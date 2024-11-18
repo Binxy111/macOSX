@@ -199,7 +199,7 @@ input.search {
     box-shadow:
             0px 1px 0px 0px rgba(0,0,0,.05),
       inset 0px 1px 0px 0px rgba(255,255,255,.15);
-    border-radius: 8px;
+    border-radius: 10px;
   }
   .push:active {
     background: -webkit-linear-gradient(top, #a8bfee, #739ee7 50%, #598fe7 50%, hsl(208, 80%, 84%));
