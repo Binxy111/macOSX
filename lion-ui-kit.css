@@ -562,6 +562,7 @@ input.search {
     height: 22px;
     line-height: 22px;
     text-align: center;
+    border-radius: 5;
   }
   .toolbar {
     padding: 2px 0 0 8px;
