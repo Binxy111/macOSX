@@ -189,3 +189,14 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+$("#steve-jobs").on("click", function () {
+	alert("Makes you wanna lick it!");
+});
+
+$("#hue").on("input", function (event) {
+	console.log(event.target.value);
+	$("#steve-jobs").css(
+		"--button-color",
+		`oklch(75% 0.15 ${event.target.value})`
+	);
+});
