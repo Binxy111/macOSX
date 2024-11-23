@@ -1,4 +1,14 @@
 /* Ville V. Vanninen / foolproof.me */
+@charset "UTF-8";
+body {
+  background: url(Aqua Blue.jpg) center center/cover fixed no-repeat;
+  font-family: "Helvetica", sans-serif;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  perspective-origin: 0 0;
+}
+
 @font-face{
   font-family: 'WebSymbolsRegular';
   src: url('fonts/websymbols-regular-webfont.eot');
