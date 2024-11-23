@@ -584,7 +584,7 @@ body {
 }
 
 body {
-  background: var(--stripes);
+  background: ;
   height: 100dvh;
   width: 100dvw;
   display: flex;
