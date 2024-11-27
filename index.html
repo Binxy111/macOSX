@@ -220,7 +220,89 @@
 				<li data-title="Trash"><img src="https://th.bing.com/th/id/R.d55230d8e640abf4fd12ce808d6e77c1?rik=hLW7iqN%2b7gSOkA&riu=http%3a%2f%2fcdn.osxdaily.com%2fwp-content%2fuploads%2f2010%2f07%2f512-TrashIcon-macosx1.png&ehk=w5RoMq57ROwV6bUNqxza8%2fDUyqEGvYK8oVXtUY2eWpI%3d&risl=&pid=ImgRaw&r=0"></li>
 		</ul>
 </footer>
-
+<!-- Currently the Start menu open and close is functional-->
+<!-- As is the "expand" burger menu option.-->
+<!-- Tiles area is scrollable.-->
+<!-- Peek works when Start menu or Edge are open-->
+<!-- Working on improving Edge app:-->
+<!-- Edge Addressbar now works - although won't load sites with x-frame-options "deny". Also codepen needs to be loaded on http not https or else mixed mode will occur if trying to load a non-https site in the Edge app-->
+<!-- Edge refresh button now works-->
+<!-- Working on making edge icon hover show live preview of browser nicely-->
+<!-- Want to add in other taskbar functions - working volume etc. And also a restart / start / shutdown animation when I can find the time.-->
+<!-- #Start menu scroll bar not as nice in Firefox / IE - use chrome where possible-->
+<!---->
+<div class="desktop"></div>
+<div class="taskbar">
+  <div class="programs">
+    <div class="icon win" data-target=".startmenu, .icon.win"><i class="fa fa-windows"></i></div>
+    <div class="icon cortana" title="Ask me anything" data-target="#cortana"><i class="fa fa-circle-o"></i></div>
+    <div class="icon application minimized edge" data-target=".id-edge">
+      <div class="app-preview preview-edge">
+        <div class="content"></div>
+      </div><i class="fa fa-edge"></i>
+    </div>
+    <div class="icon application skype" data-target="#skype"><i class="fa fa-skype"></i></div>
+  </div>
+  <div class="tray">
+    <div class="ico more-icons">
+      <div class="all-icons"><i class="fa fa-bluetooth" title="Bluetooth Devices"></i><i class="fa fa-cloud" title="OneDrive up to date"></i><i class="fa fa-envelope" title="You have new unread e-mail messages"></i><i class="fa fa-flag" title="Windows Defender requires attention"></i><i class="fa fa-keyboard-o" title="Keyboard En-NZ"></i><i class="fa fa-shield" title="Your computer is protected"></i><i class="fa fa-wifi" title="Internet Access"></i><i class="fa fa-dropbox" title="Dropbox Synced"></i></div>
+      <div class="fa fa-chevron-up" title="Show hidden icons"></div>
+    </div>
+    <div class="ico" title="Speakers: 80%"><i class="fa fa-volume-up"></i></div>
+    <div class="ico" title="50% remaining"><i class="fa fa-battery-half"></i></div>
+    <div class="ico time">
+      <div class="clock">3:54 PM</div>
+      <div class="date">11/28/2016</div>
+    </div>
+    <div class="ico" title="No new notifications"><i class="fa fa-commenting-o"></i></div>
+    <div class="peek"></div>
+  </div>
+  <div class="startmenu">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col icons">
+          <div class="icon top bars" title="Expand"><i class="fa fa-bars"></i><span class="start">start</span></div>
+          <div class="bottom">
+            <div class="icon profile" title="Amanda Ashley"><a href="http://creativecollective.studio/" target="_blank"><img class="img-responsive" src="http://rodneyrainbow.co.nz/media/UserAvatars/9a594d7d957f920777cfb383177a82f4ea065504.png?width=60&amp;height=60&amp;mode=crop"/></a><span>Andrew Ashley</span></div>
+            <div class="icon file-explorer" title="File Explorer"><i class="fa fa-folder"></i><span>File Explorer</span></div>
+            <div class="icon settings" title="Settings"><i class="fa fa-cog"></i><span>Settings</span></div>
+            <div class="icon power" title="Power"><i class="fa fa-power-off"></i><span>Power</span></div>
+          </div>
+        </div>
+        <div class="col-xs-4 col-xs-offset-2 programs">
+          <p class="title">Recently added</p>
+          <div class="item"><i class="fa fa-skype"></i><span>Skype</span></div>
+          <div class="item"><i class="fa fa-file-excel-o"></i><span>Excel</span></div>
+          <p class="title">Most used</p>
+          <div class="item"><i class="fa fa-chrome"></i><span>Google Chrome</span></div>
+          <div class="item"><i class="fa fa-firefox"></i><span>Mozilla Firefox</span></div>
+        </div>
+        <div class="col-xs-6 tiles">
+          <p class="title">Life at a glance
+            <div class="tile wide"><i class="fa fa-calendar"></i><span>Calendar</span></div>
+            <div class="tile medium"><i class="fa fa-file-pdf-o"></i><span>Adobe Acrobat</span></div>
+            <div class="tile medium photos"><span>Photos<i class="fa fa-picture-o"></i></span></div>
+            <div class="tile medium twitter"><span>Twitter<i class="fa fa-twitter"></i></span></div>
+            <div class="tile medium"><i class="fa fa-envelope"></i><span>Mail</span></div>
+            <div class="tile wide news"><span>News<i class="fa fa-newspaper-o"></i></span></div>
+            <div class="tile medium"><i class="fa fa-calculator"></i><span>Calculator</span></div>
+            <div class="tile medium"><i class="fa fa-camera"></i><span>Camera</span></div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="id-edge app minimized">
+  <div class="toolbar draggable">
+    <div class="tab"><i class="fa fa-list-alt"> </i><span>Start</span><i class="fa fa-times"></i></div>
+  </div>
+  <div class="addressbar draggable"><i class="fa fa-arrow-left"></i><i class="fa fa-arrow-right"></i><i class="fa fa-refresh"></i><span class="divider"></span>
+    <input class="edge-url" value="creativecollective.studio/"/>
+  </div>
+  <iframe class="edge-browser" src="http://creativecollective.studio/" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+	
 <div class="container">
   <h1></h1>
   <div class="example">
@@ -240,200 +322,15 @@
 </div>
 
 
-	<div id="myWindow" class="window">
-	<div class="window-top">
-		<button class="round green"></button><button class="round yellow"></button><button class="round red"></button>
-	</div>
-	<div class="window-content">
-		<iframe src="chrome.html" style="width:100%; height:100%;">
-		<br />
-		<br />
-	</div>
-	<input class="window-input" type="text" />
-</div>
-
-<div id="myWindow2" class="window">
-	<div class="window-top-no-bind">
-		<button class="round green"></button><button class="round yellow"></button><button class="round red"></button>
-	</div>
-	<div class="window-content">
-		&gt; run MyNiftyProgram2 on Window 2
-		<br />
-		&gt;
-		<br />
-		&gt;&gt; World Hello
-	</div>
-	<input class="window-input" type="text" />
-</div>
-	<style>
-		body {
-	background: #333;
-}
-
-.window {
-	position: fixed;
-	width: 400px;
-	height: 250px;
-	border-radius: 10px;
-	border: none;
-	box-shadow: 1px 1px 4px rgba(0,0,0,0,0.9), -1px 1px 4px rgba(0,0,0,0,0.9);
-	background: #fff;
-}
-
-.window-content {
-	background: #000;
-	color: #fff;
-	height: 100%;
-	font-family: monospace;
-	padding: 5px;
-}
-
-.window-input {
-	display: block;
-	font-family: monospace;
-	width: calc(100% - 12px);
-	background-color: #000;
-	color: #fff;
-	border: 4px solid #fff;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	padding: 2px;
-	position: relative;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	outline: 0;
-}
-
-.window-top, .window-top-no-bind {
-	cursor: move;
-	text-align: right;
-	height: 20px;
-	border-bottom: 1px solid rgba(0,0,0,0.5);
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-	padding: 5px;
-	background-color: #ddd;
-}
-
-.window-top-no-bind {
-	cursor: inherit;
-}
-
-.round {
-	height: 16px;
-	width: 16px;
-	border-radius: 50%;
-	border: none;
-	margin-right: 6px;
-	box-shadow: 1px 1px 2px #000;
-}
-
-.green {
-	background-color: limegreen;
-}
-
-.yellow {
-	background-color: yellow;
-}
-
-.red {
-	cursor: pointer;
-	background-color: red;
-}
-
-#myWindow {
-	z-index: 999;
-}
-
-#myWindow2 {
-	top: 0;
-	left: 500px;
-}
-	</style>
-	<script>
-		// You can choose to have an element with the class "window-top" inside of your draggable window that will act as the "handle" for the window or it will attach to the element itself
-
-function makeDraggable (element) {
-    // Make an element draggable (or if it has a .window-top class, drag based on the .window-top element)
-    let currentPosX = 0, currentPosY = 0, previousPosX = 0, previousPosY = 0;
-
-		// If there is a window-top classed element, attach to that element instead of full window
-    if (element.querySelector('.window-top')) {
-        // If present, the window-top element is where you move the parent element from
-        element.querySelector('.window-top').onmousedown = dragMouseDown;
-    } 
-    else {
-        // Otherwise, move the element itself
-        element.onmousedown = dragMouseDown;
-    }
-
-    function dragMouseDown (e) {
-        // Prevent any default action on this element (you can remove if you need this element to perform its default action)
-        e.preventDefault();
-        // Get the mouse cursor position and set the initial previous positions to begin
-        previousPosX = e.clientX;
-        previousPosY = e.clientY;
-        // When the mouse is let go, call the closing event
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag (e) {
-        // Prevent any default action on this element (you can remove if you need this element to perform its default action)
-        e.preventDefault();
-        // Calculate the new cursor position by using the previous x and y positions of the mouse
-        currentPosX = previousPosX - e.clientX;
-        currentPosY = previousPosY - e.clientY;
-        // Replace the previous positions with the new x and y positions of the mouse
-        previousPosX = e.clientX;
-        previousPosY = e.clientY;
-        // Set the element's new position
-        element.style.top = (element.offsetTop - currentPosY) + 'px';
-        element.style.left = (element.offsetLeft - currentPosX) + 'px';
-    }
-
-    function closeDragElement () {
-        // Stop moving when mouse button is released and release events
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-}
-
-// Make myWindow and myWindow2 draggable in different ways...
-
-// myWindow will only be able to be moved via the top bar (.window-top element). The main element does nothing on mouse down.
-makeDraggable(document.querySelector('#myWindow'));
-
-// myWindow2 will be able to moved by grabbing the entire element
-makeDraggable(document.querySelector('#myWindow2'));
-
-//Close the window on click of a red button
-document.addEventListener('click', e => {
-	if (e.target.closest('.round.red')) {
-		e.target.closest('.window').remove();
-	}
-});
-	</script>
-		
-	<!-- Draggable DIV -->
-<div id="mydiv">
 	
-  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-<div class="titlebar">
-<div id="mydivheader"><div class="example focus">
+<div class="example focus">
     <div class="traffic-lights">
       <button class="traffic-light traffic-light-close" id="close"></button>
       <button class="traffic-light traffic-light-minimize" id="minimize"></button>
       <button class="traffic-light traffic-light-maximize" id="maximize"></button>
     </div>
 </div>
-	</div>
-	</div>
-	<iframe src="chrome.html">
-  <p style="width: 400px; height:300px;"></p>
-  </div>
+
 <!-- partial -->
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
